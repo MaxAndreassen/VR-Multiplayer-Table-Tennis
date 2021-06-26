@@ -24,10 +24,10 @@
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
-      <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkPlayerSpawner.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Network/XRGrabNetworkInteractable.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uS87JCoOoppxBQ4lD3CkiWf0NX" />
@@ -83,7 +83,7 @@
       <workItem from="1624647466019" duration="392000" />
       <workItem from="1624650443176" duration="1693000" />
       <workItem from="1624705934428" duration="2226000" />
-      <workItem from="1624711203816" duration="2399000" />
+      <workItem from="1624711203816" duration="3215000" />
     </task>
     <servers />
   </component>
