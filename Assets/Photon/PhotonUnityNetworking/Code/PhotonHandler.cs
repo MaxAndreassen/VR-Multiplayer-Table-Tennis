@@ -303,34 +303,46 @@ namespace Photon.Pun
 
         public void OnPlayerEnteredRoom(Player newPlayer)
         {
-            // note: if the master client becomes inactive, someone else becomes master. so there is no case where the active master client reconnects
-            // what may happen is that the Master Client disconnects locally and uses ReconnectAndRejoin before anyone (including the server) notices.
 
+            bool isRejoiningMaster = newPlayer.IsMasterClient;
             bool amMasterClient = PhotonNetwork.IsMasterClient;
-            
+
+            // Nothing to do if this isn't the master joining, nor are we the master.
+            if (!isRejoiningMaster && !amMasterClient)
+                return;
+
             var views = PhotonNetwork.PhotonViewCollection;
+
+            // Get a slice big enough for worst case - all views with no compression...extra byte per int for varint bloat.
+
             if (amMasterClient)
-            {
                 reusableIntList.Clear();
-            }
 
             foreach (var view in views)
             {
-                view.RebuildControllerCache();  // all clients will potentially have to clean up owner and controller, if someone re-joins
+                // TODO: make this only if the new actor affects this?
+                view.RebuildControllerCache();
 
-                // the master client notifies joining players of any non-creator ownership
+                //// If this is the master, and some other player joined - notify them of any non-creator ownership
                 if (amMasterClient)
                 {
                     int viewOwnerId = view.OwnerActorNr;
+                    // TODO: Ideally all of this would only be targeted at the new player.
                     if (viewOwnerId != view.CreatorActorNr)
                     {
                         reusableIntList.Add(view.ViewID);
                         reusableIntList.Add(viewOwnerId);
+                        //PhotonNetwork.TransferOwnership(view.ViewID, viewOwnerId);
                     }
+                }
+                // Master rejoined - reset all ownership. The master will be broadcasting non-creator ownership shortly
+                else if (isRejoiningMaster)
+                {
+                    //Debug.LogWarning("Master Client rejoined. If that player was gone for longer, someone else should be (and stay) Master Client by now.");
+                    view.ResetOwnership();
                 }
             }
 
-            // update the joining player of non-creator ownership in the room
             if (amMasterClient && reusableIntList.Count > 0)
             {
                 PhotonNetwork.OwnershipUpdate(reusableIntList.ToArray(), newPlayer.ActorNumber);

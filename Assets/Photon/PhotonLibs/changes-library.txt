@@ -3,12 +3,6 @@ Photon C# Client Library - Changelog
 Exit Games GmbH - www.photonengine.com - forum.photonengine.com
 
 
-Version 4.1.6.3 (24. June 2021 - rev6097)
-    Fixed: An issue with deserialization of custom types.
-
-Version 4.1.6.2 (23. June 2021 - rev6092)
-    Fixed: Potential NullReferenceException in PhotonClientWebSocket.Disconnect(). If called before the connect-flow finished, the instance was null.
-    
 Version 4.1.6.1 (09. June 2021 - rev6086)
     Fixed: TPeer.TotalPacketCount and TotalCommandsInPackets counters. They were increased in two places for the Init message.
     Fixed: TPeer.TrafficStatsOutgoing.TotalCommandsInPackets counting in SendData, which was adding the remaining count in queues instead of +1.

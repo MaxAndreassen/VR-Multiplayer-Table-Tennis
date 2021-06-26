@@ -3,9 +3,6 @@ Photon Chat C# Client - Changelog
 Exit Games GmbH - www.photonengine.com - forum.photonengine.com
 
 
-Version 4.1.6.2 (17. June 2021)
-    Changed: The enumeration CustomAuthenticationType was changed to fix naming inconsistencies. Use PlayStation4 and PlayStation5 respectively. Old variants are available as obsolete.
-
 Version 4.1.5.2 (12. March 2021)
     ADDED: CustomAuthenticationType.Playstation5 (value 12).
 

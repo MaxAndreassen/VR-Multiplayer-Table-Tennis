@@ -2426,7 +2426,7 @@ namespace Photon.Pun
                         }
 
                         // Initialize all views. Typically this is just fired on a new client after it joins a room and gets the first OwnershipUpdate from the Master.
-                        // This was moved from PhotonHandler OnJoinedRoom to here, to allow objects to retain controller = -1 until an controller is actually known.
+                        // This was moved from PhotonHandler OnJoinedRoom to here, to allow objects to retain controller = -1 until an controller is actually knownn.
                         foreach (var view in PhotonViewCollection)
                         {
                             if (!reusablePVHashset.Contains(view))

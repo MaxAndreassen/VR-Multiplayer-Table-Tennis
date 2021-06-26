@@ -3,9 +3,6 @@ Photon Realtime C# Client - Changelog
 Exit Games GmbH - www.photonengine.com - forum.photonengine.com
 
 
-Version 4.1.6.2 (17. June 2021)
-    Changed: The enumeration CustomAuthenticationType was changed to fix naming inconsistencies. Use PlayStation4 and PlayStation5 respectively. Old variants are available as obsolete.
-
 Version 4.1.6.0 (19. May 2021)
     Changed: As tokenless auth is no longer allowed when using a Name Server, there is now an error log and authentication will not be done from the client. This is not happening in the normal workflow but a precaution to detect issues, should something unpredicted happen.
     Changed: SupportLogger formatting of the timestamp to include the minutes (if available). Hours will not be logged (so in the logs, there is a wrap around of log-timestamps after 60 min).

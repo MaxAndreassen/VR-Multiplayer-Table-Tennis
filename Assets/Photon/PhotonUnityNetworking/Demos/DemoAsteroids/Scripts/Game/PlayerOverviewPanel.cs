@@ -49,12 +49,8 @@ namespace Photon.Pun.Demo.Asteroids
 
         public override void OnPlayerLeftRoom(Player otherPlayer)
         {
-            GameObject go = null;
-            if (this.playerListEntries.TryGetValue(otherPlayer.ActorNumber, out go))
-            {
-                Destroy(playerListEntries[otherPlayer.ActorNumber]);
-                playerListEntries.Remove(otherPlayer.ActorNumber);
-            }
+            Destroy(playerListEntries[otherPlayer.ActorNumber].gameObject);
+            playerListEntries.Remove(otherPlayer.ActorNumber);
         }
 
         public override void OnPlayerPropertiesUpdate(Player targetPlayer, Hashtable changedProps)

@@ -45,29 +45,23 @@ namespace Photon.Pun.Demo.Cockpit
 
         Player _player;
 
-
         void Awake()
         {
             this.PropertyCellPrototype.gameObject.SetActive(false);
-        }
 
+        }
 
         public override void OnEnable()
         {
-            base.OnEnable(); // as this inherits from MonoBehaviourPunCallbacks, we need to call base
+
+            base.OnEnable();
 
             UpdateStatusText.text = string.Empty;
             NotInRoomLabel.SetActive(false);
 
             PlayerNumbering.OnPlayerNumberingChanged += OnPlayerNumberingChanged;
-        }
 
-        public override void OnDisable()
-        {
-            base.OnDisable(); // as this inherits from MonoBehaviourPunCallbacks, we need to call base
-            PlayerNumbering.OnPlayerNumberingChanged -= OnPlayerNumberingChanged;
         }
-
 
         public void SetPlayerTarget(Player player)
         {

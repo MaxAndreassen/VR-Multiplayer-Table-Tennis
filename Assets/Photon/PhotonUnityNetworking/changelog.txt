@@ -3,17 +3,6 @@ PUN 2 - Changelog
 Exit Games GmbH - www.photonengine.com - forum.photonengine.com
 
 
-v2.33 (23. June 2021)
-Fixed: Calculation of PhotonView.AmOwner. It is possible that the owner is set to actorNumber 0, which instead will apply the Master Client as owner. This caused AmOwner to be wrong.
-Fixed: Controller updates when players enter a room. Every client has to update the views, as an owner may return and regain control.
-Fixed: ControllerActorNr assignment will check if the assigned controller is inactive. In that case, the Master Client will step in (right during assignment).
-Added: Additional check if the settings file exists, to avoid using CreateAsset, when it does.
-Added: JoinRandomOrCreateRoom(). This was implemented in Realtime but not PUN.
-Changed: The enumeration CustomAuthenticationType was changed to fix naming inconsistencies. Use PlayStation4 and PlayStation5 respectively. Old variants are available as obsolete.
-Fixed: In Asteroids Demo, remote ships are not reacting to input when remote controller is inactive. 
-Fixed: Potential KeyNotFound issue in the Asteroids Demo, PlayerOverviewPanel if remote players left or the object got destroyed.
-Added: PlayerDetailsController.OnDisable() override (used in cockpit) to unsubscribe from callbacks which are subscribed in OnEnable(). Both override the inherited implementation and call base.
-
 v2.32 (09. June 2021)
 Fixed: Editor scripts to not overwrite the PhotonServerSettings when upgrading projects or loading them without a library folder. While the Editor starts up, the settings may be blank but not null. As before, if the asset is not available, it gets created.
 Updated: Library to 4.1.6.1 with several smaller adjustments. More details in changes-library.txt.
