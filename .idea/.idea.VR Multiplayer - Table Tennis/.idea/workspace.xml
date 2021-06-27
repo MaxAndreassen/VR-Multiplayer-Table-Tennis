@@ -19,15 +19,20 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Bat.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Ball.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Network/XRGrabNetworkInteractable.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.xr.interaction.toolkit@1.0.0-pre.4/Runtime/Interaction/Interactables/XRGrabInteractable.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <changedPaths>
       <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkPlayerSpawner.cs" />
-      <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkPlayer.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Network/XRGrabNetworkInteractable.cs" />
       <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkManager.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/ContinuousMovement.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Network/NetworkPlayer.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Bat.cs" />
+      <option value="$PROJECT_DIR$/Assets/Scripts/Ball.cs" />
     </changedPaths>
   </component>
   <component name="ProjectId" id="1uS87JCoOoppxBQ4lD3CkiWf0NX" />
@@ -83,7 +88,8 @@
       <workItem from="1624647466019" duration="392000" />
       <workItem from="1624650443176" duration="1693000" />
       <workItem from="1624705934428" duration="2226000" />
-      <workItem from="1624711203816" duration="3215000" />
+      <workItem from="1624711203816" duration="3817000" />
+      <workItem from="1624805930994" duration="8960000" />
     </task>
     <servers />
   </component>
